@@ -19,12 +19,11 @@ O(m*n);
 function transposeMatrix(arr){
     let rows = arr.length;
     let cols = arr[0].length
-    //console.log(rows,cols);
     let transposed = [];
-    for(let row =0; row < cols; row++){
+    for(let col =0; col < cols; col++){
       let inner = [];
-      for(let col=0; col < rows; col++){
-        inner.push(arr[col][row]);
+      for(let row=0; row < rows; row++){
+        inner.push(arr[row][col]);
       }
       
       transposed.push(inner);

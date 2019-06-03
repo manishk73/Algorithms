@@ -48,11 +48,11 @@ function calculateMatrixPerimeter(arr){
     }
     //sum of right side and left side, exclusing top left and bottom left and top right and bottom right elements (corners as those //are already considered)
     if(i+1 < rows - 1){
-      perimeter = perimeter + arr[i+1][cols-1];
-      perimeter = perimeter + arr[i+1][0];
+      perimeter = perimeter + arr[i+1][0]; //first column 
+      perimeter = perimeter + arr[i+1][cols-1]; //last column
     }
   }
-  console.log(perimeter);
+  //console.log(perimeter);
   return perimeter
 }
 

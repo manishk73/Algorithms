@@ -1,0 +1,97 @@
+/*Write a function that determines whether a string has balanced pairs of (), [], and {}. Balanced pairs are matching pairs such that for each left-hand character there is a corresponding right-hand character, and only balanced pairs between them.
+
+Balanced: "(a{b[c]d}e)" "(a)(b)[c]" "[()()]{}" "" 
+
+Not balanced: "(a{b)c}" "((a)" ")[b]"
+
+Used HackerRank
+
+//scalyr
+*/
+
+'use strict';
+
+const fs = require('fs');
+
+process.stdin.resume();
+process.stdin.setEncoding('utf-8');
+
+let inputString = '';
+let currentLine = 0;
+
+process.stdin.on('data', function(inputStdin) {
+    inputString += inputStdin;
+});
+
+process.stdin.on('end', function() {
+    inputString = inputString.split('\n');
+
+    main();
+});
+
+function readLine() {
+    return inputString[currentLine++];
+}
+
+/*
+ * Complete the 'isBalanced' function below.
+ *
+ * The function is expected to return a BOOLEAN.
+ * The function accepts STRING str as parameter.
+ */
+
+function isBalanced(str) {
+
+    let opening = ['{', '(', '['];
+    let closing = ['}', ')', ']'];
+    let map = new Map();
+    map.set("{", "}");
+    map.set("(", ")");
+    map.set("[", "]");
+    map.set("}", "{");
+    map.set(")", "(");
+    map.set("]", "[");
+    let stack = []; 
+    
+    for(let i=0; i < str.length; i++){
+        
+        let char = str[i];
+        
+        if(opening.indexOf(char)!==-1){
+            stack.push(char);
+        } else if(closing.indexOf(char) !==-1){
+        
+            
+            if (stack[stack.length-1] !== map.get(char)){
+                return false; 
+            } else if (stack[stack.length-1] === map.get(char)) {
+                
+                stack.length = stack.length-1;
+            } 
+            
+        }
+        
+    }
+    return stack.length>0 ? false: true ;
+}
+
+//  ((   (())
+
+function main() {
+    const ws = fs.createWriteStream(process.env.OUTPUT_PATH);
+
+    const str = readLine();
+
+    const result = isBalanced(str);
+
+    ws.write((result ? 1 : 0) + '\n');
+
+    ws.end();
+}
+
+//(a{b[c]d}e)
+
+
+//[()()]{}
+
+

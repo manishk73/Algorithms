@@ -5,6 +5,12 @@ let list = [[6,7], [2,4], [5,9]];
 //[[1,4], [2,5], [7,9]]; 
 //console.log(); 
 
+/*
+
+O(n * log(n)) - includes sorting 
+
+
+*/
 
 console.log(list);
 

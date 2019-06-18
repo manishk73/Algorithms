@@ -2,6 +2,8 @@
 Write a function by given input, merge them if there is overlapping. Return a new result array
   Input: [(1,6), (5,8), (10, 12), (10,13)],
   Output: [(1,8), (10,13)]
+
+  This is not optimized solution
 */
 
 const input = [[1,6], [5,8], [10, 12], [10,13]];

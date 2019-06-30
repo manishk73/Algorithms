@@ -18,7 +18,7 @@ MinHeap.prototype.hippify= function(){
   
   let length = this.data.length;
   let index = length-1;
-  //let parent = Math.floor((index-1)/2);
+ 
   while(index !=0 && this.data[this.parent(index)] > this.data[index]){
     
     let parent = this.parent(index);

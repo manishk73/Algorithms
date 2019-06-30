@@ -95,3 +95,33 @@ function main() {
 //[()()]{}
 
 
+let str = "(a{b[c]d}e)";
+
+function isBalancedString(str){
+  
+  let opening = ["{", "(", "["];
+  let closing = ["}", ")", "]"];
+  let map = new Map([["}","{"],[")","("],["]","["]]);
+  let stack = [];
+  for(let i=0; i< str.length; i++){
+    
+    let char = str[i];
+    let isOpening = opening.indexOf(char)===-1? false: true;
+    let isClosing = closing.indexOf(char)===-1? false: true;
+    if(isOpening){
+      stack.push(char);
+    } else if(isClosing){
+      if(stack.pop() !== map.get(char)){
+        return false; 
+      }
+    }
+    
+  }
+  
+ return stack.length >0 ? false: true;
+}
+
+str ="";
+console.log(isBalancedString(str));
+
+

@@ -26,7 +26,7 @@ let findTargetElements = function(input, target){
       return [start, end];
     }
     
-    //sum is greater tham target  
+    //sum is greater than target  
     if(target- input[start] < input[end]) {
       
       end--;

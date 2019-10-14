@@ -1,3 +1,10 @@
+/**
+ * TIME COMPLEXITY IS - O(log(n))
+ * 
+ * @param {*} arr 
+ * @param {*} key 
+ */
+
 function binarySearch(arr,key){
   
   let low =0; 

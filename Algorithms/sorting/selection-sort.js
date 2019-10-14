@@ -2,16 +2,16 @@
 a[] = 45 23 40 67 87 90 
 n= 6
 
-algo - compare a[0] element to a[1] element and which ever is small element 
-store in min_index varaible in iterative way. 
+This algorythm maintains 2 arrays internally in the array we are sorting 
+one is sorted array and other is unsorted array
 
-so first iteration will bring small element at [0] position 
-second iteration will bring selecon small number in [1] position
+Step1. - search min value element from 0 to n
+Setp2. - move min value element to 0 position.
+Setp3. - follow step 1 from index 1 to n and then step2
+Do this until array is sorted 
 
-if(a[i]>a[i+1]) 
-  min_index = a[i+1];
-   
-
+Time Complexity O(n ^ 2)
+Best alogrithm in sorting - HeapSort 
 */
 
 

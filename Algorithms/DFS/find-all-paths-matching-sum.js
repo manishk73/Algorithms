@@ -1,5 +1,7 @@
 /*
 DFS - Backtracking 
+
+O(N) - cause we will traverse each node in tree
 */
 
 class TreeNode {
@@ -16,7 +18,7 @@ class TreeNode {
 let binaryTreeRoot = new TreeNode(12);
 binaryTreeRoot.left = new TreeNode(7);
 binaryTreeRoot.right = new TreeNode(1);
-binaryTreeRoot.left.left = new TreeNode(4);
+binaryTreeRoot.left.left = new TreeNode(4);mo
 binaryTreeRoot.right.left = new TreeNode(10);
 binaryTreeRoot.right.right = new TreeNode(5);
 

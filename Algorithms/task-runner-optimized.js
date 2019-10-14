@@ -4,16 +4,17 @@ const TaskRunner = function(max){
   
   const tasks = [];
   let started = false;
-  let currTasks = 0;
+  let runningTasks = 0;
+  let executing =false;
   this.push = (task)=>{
     tasks[tasks.length] = task;
-    execute()
+    if(!executing) execute()
   }
   function reportBack(){
     for(let i=0; i < tasks.length-1; i++){
       tasks[i] = tasks[i+1];
     }
-    currTasks--;
+    runningTasks--;
     if(tasks.length>0){
       tasks.length = tasks.length-1;
       execute();
@@ -21,10 +22,12 @@ const TaskRunner = function(max){
   }
   
   function execute(){
-    for(let i = currTasks; i< max && i< tasks.length; i++){
+    executing=true;
+    for(let i = runningTasks; i< max && i< tasks.length; i++){
       tasks[i](reportBack);
-      currTasks++;
+      runningTasks++;
     }
+    executing=false;
   }
 }
 

@@ -56,7 +56,7 @@ class TaskRunner {
     
      let i = this.queue.length-1;
      while(i>=0 && this.queue[i].order >task.order){
-       //need to add element so increasing size of arry dynamically 
+       //need to add element so increasing size of array dynamically 
        this.queue[i+1] = this.queue[i]; 
        i--;
      }

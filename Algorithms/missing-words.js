@@ -1,8 +1,12 @@
 
 /*I using programming*/
-function missingWords(string1, string2){
+function findMissingWords(string1, string2){
   
-  if(string1.length < string2.length) return;
+  if(string1.length < string2.length) {
+    let temp = string1;
+    string1 = string2;
+    string2 = temp;
+  }
   
   let arr1 = string1.split(" ");
   let arr2 = string2.split(" ");
@@ -16,6 +20,6 @@ function missingWords(string1, string2){
   return missingWords;
 }
 
-let missWords = missingWords('I am using hackerrank to improve programming', 'am hackerrank to improve')
+let missWords = findMissingWords('I am using hackerrank to improve programming', 'am hackerrank to improve')
 
 console.log(missWords);

@@ -79,7 +79,6 @@ const addCount = function(count, dataStr,map){
        map.set(domainStr,total);
      }  
   
-  
 } 
 
 const getDomainTotal = function(map,domainStr){

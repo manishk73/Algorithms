@@ -11,10 +11,11 @@ function longestSubstr(s1,s2,startIdx1=0,startIdx2=0){
     console.log("finding",char);
     if(index!==-1){
       result.push(char);
-      result.push(longestSubstr(s1,s2,i+1, index+1));
+      result.push(...longestSubstr(s1,s2,i+1, index+1));
     }
     console.log(result);
     results.push(result);
+   
   }
   const final = getLongest(results);
   return final.join('');

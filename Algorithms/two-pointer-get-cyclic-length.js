@@ -19,7 +19,7 @@ function LinkedList(){
     let fast = head;
     
     //console.log(fast);
-    while(slow !== null && fast !==null){
+    while(fast !== null && fast.next !==null){
       
      
         slow = slow.next;
@@ -49,7 +49,7 @@ function LinkedList(){
       return counter;  
     }
     
-    while(slow !== null && fast !==null){
+    while(fast !== null && fast.next !==null){
       
       slow = slow.next;
       fast = fast.next.next;
@@ -70,12 +70,12 @@ function LinkedList(){
     
     while(lengthOfCycle>0){
       
-      pointer2 = pointer2.next;
+      pointer2 = pointer2.next;-
       lengthOfCycle--;
       
     }
     
-    while(pointer1 !== pointer2 ){
+    while(pointer1 !== pointer2){
       
       pointer1 = pointer1.next;
       pointer2 = pointer2.next;

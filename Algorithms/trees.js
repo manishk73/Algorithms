@@ -49,6 +49,12 @@ We do not ask any “brain teasers” or trick questions.  From a general techno
          //console.log(this.root);
          return this;
      }
+     /**
+      * Inorder - LEFT ROOT RIGHT 
+      * Preorder - ROOT LEFT RIGHT
+      * Postorder - LEFT RIGHT ROOT 
+      * Breadfirst BFS - Level Order 
+      */
      this.inorder = () =>{
         
         let arr = []; 

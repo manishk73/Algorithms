@@ -38,7 +38,7 @@ function BinarySearchTree(){
   
   this.findNode= function(key){
     
-    function findNode(root, key){
+    function getNode(root, key){
       
       if(!root || root.key === key){
         
@@ -47,15 +47,15 @@ function BinarySearchTree(){
       
       if(root.key > key){
         
-        return findNode(root.left, key);
+        return getNode(root.left, key);
       } else {
         
-        return findNode(root.right, key);
+        return getNode(root.right, key);
       }
       
     }
     
-    return findNode(this.root, key);
+    return getNode(this.root, key);
   }
   
   this.delete = function(key){

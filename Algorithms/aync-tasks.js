@@ -22,6 +22,7 @@ function executor(tasks){
   
   if(tasks.length ==0){
     console.log("empty task list, can't run executor");
+    return;
   }
   let task = tasks.shift();
   let callback = function(err, data){

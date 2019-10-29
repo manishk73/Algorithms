@@ -20,6 +20,9 @@ Question: Find the leftmost column that has number 1
 
 In this example, answer will be 2, because there is a number 1 at Matrix[1, 1]
 
+*/ 
+/** 
+ * O(n^2)
 */
 
 let findLeftmostColumn = function(input){
@@ -63,3 +66,42 @@ const input = [[0, 0, 1, 1, 1],
 console.log(findLeftmostColumn(input));
   
 
+/*************************** 
+ * O(n)
+ * 
+*/
+
+const input = [[0, 0, 0, 1, 1],
+
+ [0, 0, 1, 1, 1],
+
+ [0, 0, 1, 1, 1],
+
+ [0, 0, 0, 0, 0],
+
+ [0, 1, 1, 1, 1]];
+
+
+function getLeftMostColumn(input){
+  
+  let row = 0,col = 0, minCol = Number.MAX_VALUE;
+  
+  while(row < input.length && col < input[0].length){
+    
+   if(input[row][col] ===0){
+     if(col === input[0].length-1) {
+       row++; col=0;
+     } else {
+        col++;
+     }  
+    
+   } else if(input[row][col] ===1){
+     minCol = Math.min(minCol, col+1);
+     col=0;
+     row++;
+   }
+  }
+  console.log(minCol);
+}
+
+getLeftMostColumn(input);

@@ -61,18 +61,14 @@ function isBalanced(str) {
             stack.push(char);
         } else if(closing.indexOf(char) !==-1){
         
-            
-            if (stack[stack.length-1] !== map.get(char)){
+            let prevBracket = stack.pop();
+            if (prevBracket !== map.get(char)){
                 return false; 
-            } else if (stack[stack.length-1] === map.get(char)) {
-                
-                stack.length = stack.length-1;
             } 
-            
         }
         
     }
-    return stack.length>0 ? false: true ;
+    return stack.length===0 ? true: false ;
 }
 
 //  ((   (())
@@ -118,7 +114,7 @@ function isBalancedString(str){
     
   }
   
- return stack.length >0 ? false: true;
+ return stack.length ===0 ? true: false;
 }
 
 str ="";

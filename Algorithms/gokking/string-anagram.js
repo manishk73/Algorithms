@@ -15,7 +15,7 @@ cba
 
 Example 1:
 
-String="qp", Pattern="pq"
+String="ppqp", Pattern="pq"
 Output: [1, 2]
 Explanation: The two anagrams of the pattern in the given string are "pq" and "qp".
 Input: String="ppqp", Pattern="pq"

@@ -70,7 +70,7 @@ function LinkedList(){
     
     while(lengthOfCycle>0){
       
-      pointer2 = pointer2.next;-
+      pointer2 = pointer2.next;
       lengthOfCycle--;
       
     }

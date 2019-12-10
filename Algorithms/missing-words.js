@@ -14,7 +14,7 @@ function findMissingWords(string1, string2){
   for(let i=0; i< arr1.length; i++){
     
       if(arr2.indexOf(arr1[i]) ===-1){
-        missingWords[missingWords.length] = arr1[i];
+        missingWords.push(arr1[i]);
       }
   }
   return missingWords;

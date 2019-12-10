@@ -1,5 +1,7 @@
 /*Find first local max
-Write a function that takes a list of positive integers and returns the first local maximum found or null if nothing is found. A local maximum is when a number is greater than both of its neighbors in the following example the first local max is 4. 
+Write a function that takes a list of positive integers 
+and returns the first local maximum found or null if nothing is found. 
+A local maximum is when a number is greater than both of its neighbors in the following example the first local max is 4. 
 
 e.g. [1,2,3,4,3,5,6,7,8,9] would return 4
 

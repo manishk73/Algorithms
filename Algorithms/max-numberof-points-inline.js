@@ -3,7 +3,7 @@
  * @return {number}
  */
 
-let points = [[1,1],[3,2],[5,3],[4,1],[2,3],[1,4], [2,2],[2,2]];
+let points = [[1,1],[3,2],[5,3],[4,1],[2,3],[1,4],[2,2],[2,2]];
 //let points = [[0,0],[1,1],[1,-1]];
 var maxPoints = function(points) {
     
